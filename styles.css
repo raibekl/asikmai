@@ -1,0 +1,206 @@
+/* === GENERAL STYLES === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f3ef;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h5 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #111 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: #f5f3ef !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #c9bca5 !important;
+}
+
+#theme-btn {
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* === HERO SECTION === */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(72, 70, 70, 0.5)), 
+              url('clark-street-mercantile-P3pI6xzovu0-unsplash (1).jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f5f3ef;
+  margin-top: 56px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero .btn {
+  background-color: #f5f3ef;
+  color: #111;
+  border: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #0b3c58;
+  color: #111;
+}
+
+/* === FILTER BUTTONS === */
+.filter-btn {
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* === PRODUCT CARDS === */
+.card {
+  border: none;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* === ABOUT US === */
+.about-us {
+  background-color: #747474;
+  color: #111;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* === FAQ === */
+#faq .accordion-button {
+  background-color: #f5f3ef;
+  color: #111;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+#faq .accordion-button:hover {
+  background-color: #e5dfd5;
+}
+
+#faq .accordion-item {
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex; /* JS будет переключать на 'flex' — оставь flex здесь, но скрывай через visibility если надо */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup[style*="display: none"] { display: none; } /* keep hidden by style attr */
+
+.popup-content {
+  width: 90%;
+  max-width: 420px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+
+
+/* === CONTACT SECTION === */
+.contact {
+  background-color: #f5f3ef;
+  color: #111;
+}
+
+.contact a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  color: #c9bca5;
+}
+
+/* === SOCIAL ICONS === */
+.social-icons a {
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #c9bca5;
+  transform: translateY(-4px);
+}
+
+
+
+
+/* === FOOTER === */
+footer {
+  background-color: #111;
+  color: #f5f3ef;
+  font-size: 0.9rem;
+}
+
+#datetime {
+  font-weight: 500;
+  color: #c9bca5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    height: 60vh;
+  }
+}

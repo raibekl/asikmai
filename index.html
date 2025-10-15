@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOID.SHOP | Modern Merch Store</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">VOID.SHOP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li class="nav-item"><button id="theme-btn" class="btn btn-outline-light ms-3">Change Theme</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Explore the new drop</h1>
+      <p class="lead">Minimal design. Maximum comfort.</p>
+      <a href="#shop" class="btn btn-dark mt-3">Shop Now</a>  
+    </div>
+  </section>
+
+  <!-- FILTER SECTION -->
+  <section class="text-center py-4" id="filters">
+    <div class="container">
+      <h4 class="mb-3">Filter by:</h4>
+      <button class="btn btn-outline-dark mx-1 filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="new">New</button>
+      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="popular">Popular</button>
+      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="old">Old</button>
+    </div>
+  </section>
+
+  <!-- SHOP SECTIONS -->
+  <section class="products py-5" id="shop">
+    <div class="container">
+      <div id="product-list" class="row g-4">
+        <!-- JS will load all 18 products here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section class="about-us py-5 bg-light" id="about">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">About Us</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">
+        VOID.SHOP is a modern merch store where minimal design meets maximum comfort. 
+        We create high-quality hoodies, sweatshirts, and T-shirts to keep you stylish every day.
+      </p>
+    </div>
+
+  </section>
+<!-- КНОПКА "ПОДПИСАТЬСЯ" -->
+<div class="text-center my-4">
+  <button id="subscribe-btn" class="btn btn-dark px-4">Подписаться</button>
+</div>
+
+<!-- POPUP ФОРМА -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="close-popup" class="close">&times;</span>
+    <h4 class="mb-3">Подписка на новости VOID.SHOP</h4>
+    <input type="email" id="popup-email" class="form-control mb-3" placeholder="Введите ваш email">
+    <button id="popup-submit" class="btn btn-dark w-100">Отправить</button>
+    <p id="popup-msg" class="mt-2 text-center"></p>
+  </div>
+</div>
+
+  <!-- FAQ SECTION -->
+  <section class="py-5" id="faq">
+    <div class="container">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+              Do you ship internationally?
+            </button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes, we ship to over 50 countries worldwide.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+              What is your return policy?
+            </button>
+          </h2>
+          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">You can return any product within 14 days of delivery.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+              How can I track my order?
+            </button>
+          </h2>
+          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">You will receive an email with a tracking link once your order ships.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+<!-- CONTACT / SOCIALS SECTION -->
+  <section class="contact py-5" id="contact">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">Contact & Socials</h2>
+      <p class="mb-3">Have questions? Reach us at <a href="mailto:info@voidshop.com">info@voidshop.com</a></p>
+      <div class="social-icons fs-3 d-flex justify-content-center gap-4">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 border-top bg-dark text-light">
+    <p>© 2025 VOID.SHOP — Designed by Rai</p>
+    <p id="datetime"></p>
+  </footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
